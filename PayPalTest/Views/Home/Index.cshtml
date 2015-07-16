@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("PostToPaypal", "Home"))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">Item name</div>
+            <div class="col-md-10">
+                @Html.TextBox("item", "ScrumToPractice 30 days", new { @readonly = true })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Price</div>
+            <div class="col-md-10">
+                @Html.TextBox("amount", "30.00", new { @readonly = true })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Pay with Paypal" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}

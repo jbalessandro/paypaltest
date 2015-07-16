@@ -1,0 +1,16 @@
+﻿@using PayPalTest.Models;
+@model PayPalTest.Models.Payment
+
+@{
+    ViewBag.Title = "RedirectFromPayPal";
+}
+
+<h2>RedirectFromPayPal</h2>
+
+
+Thanks!
+
+Now you can use it!
+
+This is your transaction ID: @Model.Txn_Id<br />
+Authorization amount: @Model.Mc_Gross
